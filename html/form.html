@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>少侠请留步</title>
+    <link rel="stylesheet" href="../css/form.css">
+    <script src="http://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>Contact me</header>
+        <!-- 进度条 -->
+        <div class="progress-bar">
+            <div class="step">
+                <p>Info</p>
+                <!-- 未完成时显示数字 -->
+                <div class="bullet">
+                    <span>1</span>
+                </div>
+                <!-- 完成时图标变为打钩 -->
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Contact</p>
+                <div class="bullet">
+                    <span>2</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Who</p>
+                <div class="bullet">
+                    <span>3</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+            <div class="step">
+                <p>Submit</p>
+                <div class="bullet">
+                    <span>4</span>
+                </div>
+                <div class="check fas fa-check"></div>
+            </div>
+        </div>
+
+        <div class="form-outer">
+            <form action="#">
+                <!-- 滑动页面 -->
+                <!-- 基本信息页 -->
+                <div class="page slidepage">
+                    <div class="title">Basic Info</div>
+                    <div class="field">
+                        <div class="label">名字</div>
+                        <!-- 输入框 -->
+                        <input type="text">
+                    </div>
+                    <!-- 下拉选项框 -->
+                    <div class="field">
+                        <div class="label">性别</div>
+                        <select>
+                            <option>保密</option>
+                            <option>母的</option>
+                            <option>公的</option>
+                        </select>
+                    </div>
+                    <div class="field nextBtn">
+                        <button>Next</button>
+                    </div>
+                </div>
+                <!-- 联系方式页 -->
+                <div class="page">
+                    <div class="title">Contact Detail</div>
+                    <div class="field">
+                        <div class="label">QQ</div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">微信</div>
+                        <input type="text">
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-1 prev">Previous</button>
+                        <button class="next-1 next">Next</button>
+                    </div>
+                </div>
+                <!-- 自我介绍页 -->
+                <div class="page">
+                    <div class="title">About you</div>
+                    <div class="field">
+                        <div class="label">简介</div>
+                        <input type="text">
+                    </div>
+                    <div class="field">
+                        <div class="label">我的信息来自</div>
+                        <!-- 下拉选项框 -->
+                        <select>
+                            <option>学校</option>
+                            <option>网络</option>
+                            <option>社会交际</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                    <div class="field btns">
+                        <button class="prev-2 prev">Previous</button>
+                        <button class="next-2 next">Next</button>
+                    </div>
+                </div>
+                <!-- 更多+提交页 -->
+                <div class="page">
+                    <div class="title">More Details:</div>
+                    <div class="field">
+                        <div class="label">其他备注</div>
+                        <!-- 输入框 -->
+                        <textarea name="#" id="1" cols="15" rows="5"></textarea>
+                    </div>
+                    <div class="field"></div>
+                    <div class="field btns">
+                        <button class="prev-3 prev">Previous</button>
+                        <button class="Submit">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="../js/script.js"></script>
+    
+</body>
+</html>

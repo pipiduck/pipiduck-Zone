@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>课程设计 | 千方百记小程序</title>
+    <link rel="stylesheet" href="../css/program.css">
+</head>
+
+<body>
+    <!-- 顶部首图与简介 -->
+    <div class="head">
+        <div class="top">
+            千方百记&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;个性化记账本&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;趣味记账法&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;微信小程序&emsp;&emsp;&emsp;
+            |&emsp;&emsp;&emsp;腾讯云开发&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;轻应用&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;云存储
+        </div>
+        <div class="title">
+            <span>千方百记</span>
+            <span style="font-size: 20px;"> Version1.1.8</span>
+        </div>
+        <div class="text">
+            <p>
+                <span style="font-weight: 500; font-size: 15px;">[前端] </span>
+                采用微信小程序原生框架开发,该框架提供了自己的视图层描述语言WXML和WXSS，</br>
+                以及基于JavaScript的逻辑层框架，并在视图层与逻辑层间提供了数据传输和事件系统，</br>
+                让开发者能够专注于数据与逻辑。
+            </p>
+            <p>
+                <span style="font-weight: 500; font-size: 15px;">[后端] </span>
+                采用云数据库：既可以在小程序前端操作, 也能在云函数中读写的 JSON 数据库，</br>
+                不再受限于关系型数据库复杂的操作模式构建，数据管理上非常简洁。
+            </p>
+        </div>
+    </div>
+    <!-- 基础功能 -->
+    <div class="cont-1">
+        <div class="inner">
+            <div class="title">「 日常账本-八项基础功能 」</div>
+            <!-- grid布局 -->
+            <div class="func">
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_mxsc.png" alt=""></div>
+                    <p>明细生成</p>
+                    <p style="color: rgb(116, 116, 116);">Detail generation</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_zdck.png" alt=""></div>
+                    <p>账单查看</p>
+                    <p style="color: rgb(116, 116, 116);">Bill review</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_zmxg.png" alt=""></div>
+                    <p>账目修改</p>
+                    <p style="color: rgb(116, 116, 116);">Revision accounts</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_yssd.png" alt=""></div>
+                    <p>预算设定</p>
+                    <p style="color: rgb(116, 116, 116);">Budget setting</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_jkys.png" alt=""></div>
+                    <p>监控预算</p>
+                    <p style="color: rgb(116, 116, 116);">Monitor budget</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_sztb.png" alt=""></div>
+                    <p>收支图表</p>
+                    <p style="color: rgb(116, 116, 116);">Expenditure chart</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_lbdy.png" alt=""></div>
+                    <p>类别定义</p>
+                    <p style="color: rgb(116, 116, 116);">Customize type</p>
+                </div>
+                <div class="item">
+                    <div class="circle"><img src="../img/icon_zbsc.png" alt=""></div>
+                    <p>账本商城</p>
+                    <p style="color: rgb(116, 116, 116);">Ledger store</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 账本功能 -->
+    <div class="cont-2">
+        <div class="inner">
+            <!-- 4个对应账本的内容盒子 -->
+            <div class="container">
+                <div class="block left">
+                    <!-- 靠左浮动 -->
+                    <div class="text-1">
+                        <img src="../img/acc-jy.jpg" alt="">
+                        <p>记录用户生意收支、库存商品管理</p>
+                    </div>
+                    <div class="text-2">
+                        <span class="text-2-1">面向人群</span>
+                        <span>小型商家、个体经营户</span>
+                    </div>
+                    <div class="text-3">
+                        <span class="text-2-1">个性功能</span>
+                        <ul>
+                            <li>支出、收入类别（进货成本、人工成本...）对应匹配经营场景</li>
+                            <li>成本、毛利率、现金流量等经营数据指标展示营收状况</li>
+                            <li>商品管理记录在售商品成本、售价信息</li>
+                            <li>库存管理及时记录商品出入库，动态更新库存数量</li>
+                            <li>库存商品减少按售价计入主营业务收入/增加则按进价计入成本支出</li>
+                            </span>
+                    </div>
+                </div>
+                <div class="block right">
+                    <!-- 靠右浮动 -->
+                    <div class="text-1">
+                        <img src="../img/acc-xz.jpg" alt="">
+                        <p>记录用户薪资并计算缴纳税额与节税项目</p>
+                    </div>
+                    <div class="text-2">
+                        <span class="text-2-1">面向人群</span>
+                        <span>多元收入、薪资年度内有变化人群</span>
+                    </div>
+                    <div class="text-3">
+                        <span class="text-2-1">个性功能</span>
+                        <ul>
+                            <li>跳槽、涨薪、年终奖收入变动及时记入薪资账单</li>
+                            <li>社保、公积金缴纳比例信息按所在城市自动计算</li>
+                            <li>大病医疗、子女教育、赡养老人、住房租金节税项目计算好帮手</li>
+                            <li>月度、年度个人缴纳税费一键生成</li>
+                        </ul>
+                        </span>
+                    </div>
+                </div>
+                <div class="block left">
+                    <div class="text-1">
+                        <img src="../img/acc-bx.jpg" alt="">
+                        <p>记录用户对公方面开销以及报销情况</p>
+                    </div>
+                    <div class="text-2">
+                        <span class="text-2-1">面向人群</span>
+                        <span>报销账目多且繁杂人群</span>
+                    </div>
+                    <div class="text-3">
+                        <span class="text-2-1">个性功能</span>
+                        <ul>
+                            <li>帮助记录管理单位信息（抬头、税号）</li>
+                            <li>记账时附加上传发票凭证，随时下载防止类电子发票的丢失</li>
+                            <li>记账明细中可选择添加先前录入的报销单位</li>
+                            <li>新增明细默认属性未报销，用户可在报销后标记为已报销</li>
+                            <li>直观查看已报销-未报销饼图</li>
+                            </span>
+                    </div>
+                </div>
+                <div class="block right">
+                    <div class="text-1">
+                        <img src="../img/acc-ly.jpg" alt="">
+                        <p>记录用户旅行期间个人/团体各项花费</p>
+                    </div>
+                    <div class="text-2">
+                        <span class="text-2-1">面向人群</span>
+                        <span>习惯记录旅行开支、团体出游人群</span>
+                    </div>
+                    <div class="text-3">
+                        <span class="text-2-1">个性功能</span>
+                        <ul>
+                            <li>团体/个人账分开管理，在线计算旅行AA费用</li>
+                            <li>团体账单已分摊项可标记为已分摊，AA计算时仅显示未分摊明细</li>
+                            <li>每次旅程可自动匹配旅程关键词，生成对应旅行账单海报</li>
+                            <li>按旅程中个人-团体账单查看折线图与饼图</li>
+                        </ul>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

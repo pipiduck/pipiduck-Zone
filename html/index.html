@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipiduck Zone</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- jQuery仅用于导航栏下界面切换 -->
+        
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            //默认显示首页内容
+            $("#tab_1").show();
+            $("#tab_2").hide();
+            $("#tab_3").hide();
+            $("#tab_4").hide();
+
+            $("#b1").click(function () {
+                $("#tab_1").show();// 显示
+                $("#tab_2").hide();// 隐藏
+                $("#tab_3").hide();
+                $("#tab_4").hide();
+            });
+            $("#b2").click(function () {
+                $("#tab_1").hide();
+                $("#tab_2").show();
+                $("#tab_3").hide();
+                $("#tab_4").hide();
+            });
+            $("#b3").click(function () {
+                $("#tab_1").hide();
+                $("#tab_2").hide();
+                $("#tab_3").show();
+                $("#tab_4").hide();
+            });
+            $("#b4").click(function () {
+                $("#tab_1").hide();
+                $("#tab_2").hide();
+                $("#tab_3").hide();
+                $("#tab_4").show();
+            });
+        });
+    </script>
+
+    <!-- 导航栏 -->
+    <div id="navigate">
+        <div class="inner">
+            <div class="logo"></div>
+            <div class="nav-text">
+                <ul>
+                    <li><a href="#" id="b1">首页</a></li>
+                    <li><a href="#" id="b2">关于我鸭</a></li>
+                    <li><a href="#" id="b3">我的作品</a></li>
+                    <li><a href="#" id="b4">个人爱好</a></li>
+                    <li><a href="../html/form.html">欢迎来撩</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- tab1即为首页 -->
+    <div id="tab_1">
+        <!-- 轮播图 -->
+        <div class="main-slider bg-blur">
+            <div class="inner">
+                <div class="slidershow">
+                    <!-- 这里用js实现banner的自动轮播 -->
+                    <script type="text/javascript">
+                        var index = 0;
+                        var indexImg = 0;
+                        //改变图片
+                        function ChangeImg() {
+                            var a = document.getElementsByClassName("s1");
+                            if (index > 80) index = 0;
+                            var marginleft = '0 -' + index + '% 0 0';
+                            a[0].style.margin = marginleft;
+                            index = index + 20;
+                            //改变banner背景图（模糊）
+                            if (indexImg > 4) indexImg = 0;
+                            var b = document.getElementsByClassName("main-slider");
+                            b[0].style = 'background-image: url(../img/banner' + indexImg + '.jpg); '
+                            indexImg++;
+                        }
+                        //设置定时器，每隔两秒切换一张图片
+                        setInterval(ChangeImg, 2000);
+                    </script>
+
+                    <div class="slides">
+                        <input type="radio" name="r" id="r1">
+                        <input type="radio" name="r" id="r2">
+                        <input type="radio" name="r" id="r3">
+                        <input type="radio" name="r" id="r4">
+                        <input type="radio" name="r" id="r5">
+
+                        <div class="slide s1">
+                            <img src="../img/banner0.jpg" alt="1">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/banner1.jpg" alt="2">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/banner2.jpg" alt="3">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/banner3.jpg" alt="4">
+                        </div>
+                        <div class="slide">
+                            <img src="../img/banner4.jpg" alt="5">
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部的点击切换banner按钮 -->
+                <div class="banner-nav">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
+        </div>
+        <!-- 简介/打个招呼 -->
+        <div id="container-1-1">
+            <div class="inner">
+                <div class="profile">
+                    <img src="../img/profile.jpg" alt="">
+                    <div class="text">鸭鸭 · 碎碎念</div>
+                </div>
+                <div class="quotation-1">"</div>
+                <div class="profile-text">
+                    &emsp;&emsp;hey，这里是pipiduck的小空间～很高兴遇见你:)<br>
+                    &emsp;&emsp;pipiduck人称鸭鸭，除了微博朋友圈的快乐源泉，平日最喜研究美食，私以为生活里充满幸福感的事莫过于烘焙，麻薯蛋挞古早蛋糕戚风蛋糕酥饼随手拈来。黄油芝士堪称烘焙灵魂，鸭鸭最最爱。除了美食之外也喜欢捣鼓各种美工，不管是甲方的海报展板，还是仅仅为一条朋友圈的精致排版，都让人感觉元气满满。从小到大没什么运动细菌，唯一的业余运动爱好羽毛球，充实生活。<br>
+                    &emsp;&emsp;啊对啦，我是一只海岛鸭。土生土长的海南岛鸭子，摘椰子偷菠萝蜜骑海豚我…不好意思我都不会…emmmm对游泳也不会，但是这个从小抓螃蟹还是比较擅长的（帅气脸）。鸭鸭着实很爱很爱这片可爱的土地，所谓小岛生活万物可爱嘛，欢迎朋友们来玩哟。<br>
+                    &emsp;&emsp;以上是鸭鸭所有的不正经介绍，正经介绍请移步“关于我鸭”<br>
+                    &emsp;&emsp;如果有志同道合的小伙伴欢迎来撩，期待遇见另一个有趣的灵魂！
+                </div>
+                <div class="quotation-2">"</div>
+            </div>
+        </div>
+        <!-- 近期动态区 -->
+        <div id="container-1-2">
+            <div class="inner">
+                <div class="title">
+                    <img src="../img/title-latest.jpg" alt="">
+                </div>
+                <div class="card-outer">
+                    <div class="card-cont">
+                        <!-- 定义每一张动态卡片 -->
+                        <div class="card">
+                            <div class="img">
+                                <img src="../img/card1.png" alt="">
+                            </div>
+                            <div class="top-text">
+                                <div class="name">小程序开发 | 千方百记</div>
+                                <p>它来了它来了，我们的小程序终于上线了！</p>
+                            </div>
+                            <!-- 鼠标移动展示下半部分内容 -->
+                            <div class="bottom-text">
+                                <div class="text">千方百计是我们小组耗时一个月开发的基于原生框架的微信小程序。包含普通记账、图表、
+                                    预算功能，除此之外在基础上我们面对用户不同使用场景延伸开发了薪资、经营、报销、旅游账本... </div>
+                                <div class="btn">
+                                    <a href="../html/program.html">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="img">
+                                <img src="../img/card2.png" alt="">
+                            </div>
+                            <div class="top-text">
+                                <div class="name">健身打卡 | 有氧＋HIIT</div>
+                                <p>今天又跟着魔鬼帕姐运动啦</p>
+                            </div>
+                            <div class="bottom-text">
+                                <div class="text">打卡不记得是多少次。清晰记得第一次跟着帕梅拉运动的时候，开始5分钟感觉离
+                                    当场死亡就差一点啊呜呜呜。不过多练几次就慢慢习惯这种中间不休息的高强度虐腹运动啦。马甲线进击加油加油加油！ </div>
+                                <div class="btn">
+                                    <a
+                                        href="http://www.bilibili.com/video/av96693974/?share_source=copy_link&p=1&ts=1591977771&share_medium=iphone&bbid=b302d3f4b2590b46603c6c8ee08d40b8">Read
+                                        more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="img">
+                                <img src="../img/card3.png" alt="">
+                            </div>
+                            <div class="top-text">
+                                <div class="name">考研打卡 | 数据结构</div>
+                                <p>传说中令人头晕目眩的KMP</p>
+                            </div>
+                            <div class="bottom-text">
+                                <div class="text">KMP算法通过构造NEXT数组来解决
+                                    主串指针回溯次数过多的问题，降低时间复杂度。众所周知b站是著名的学习网站，起初看书云里雾里的，看完天勤的解说清清爽爽~
+                                </div>
+                                <div class="btn">
+                                    <a
+                                        href="http://www.bilibili.com/video/av49930100/?share_source=copy_link&p=1&ts=1591977795&share_medium=iphone&bbid=b302d3f4b2590b46603c6c8ee08d40b8">Read
+                                        more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- tab2即为个人简介（关于我鸭） -->
+    <div id="tab_2">
+        <div class="inner">
+            <!-- 基本信息 -->
+            <div class="info-basic">
+                <img src="../img/photo.jpg" alt="">
+                <div class="cont">
+                    <ul>
+                        <li>
+                            <div class="text-1">姓 名</div>
+                            <div class="line1"></div>
+                            <div class="text-2">王诗雅</div>
+                        </li>
+                        <li>
+                            <div class="text-1">出生年月</div>
+                            <div class="line1"></div>
+                            <div class="text-2">1999.05</div>
+                        </li>
+                        <li>
+                            <div class="text-1">民 族</div>
+                            <div class="line1"></div>
+                            <div class="text-2">汉族</div>
+                        </li>
+                        <li>
+                            <div class="text-1">身 高</div>
+                            <div class="line1"></div>
+                            <div class="text-2">156cm</div>
+                        </li>
+                        <li>
+                            <div class="text-1">联系方式</div>
+                            <div class="line2"></div>
+                            <div class="text-2">13876383639</div>
+                        </li>
+                        <li>
+                            <div class="text-1">所在院校</div>
+                            <div class="line2"></div>
+                            <div class="text-2">中南财经政法大学</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 表格 -->
+            <div class="info-excel">
+                <table class="table" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <!-- 第一列内容-标题 -->
+                            <td class="td-title" height="180px">
+                                <img src="../img/icon-edu.png" alt="">
+                                <p style="margin:0;">教育背景</p>
+                            </td>
+                            <!-- 第二列内容 -->
+                            <td class="td-text">
+                                <p style="font-weight: 600;"> 2017.09-2021.06 中南财经政法大学</p>
+                                <p style="font-weight: 500;"> 信息系统与信息管理（主修） 金融学（辅修）</p>
+                                <p style="font-size: 13px;">主修专业课程：Java网络编程、c++程序设计、数据库管理实务、Windows编程、运筹与决策...</p>
+                                <p style="font-size: 13px;">辅修专业课程：货币金融学、会计学、计量经济学、公司金融、金融市场学...</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-title" height="200px">
+                                <img src="../img/icon-sch.png" alt="">
+                                <p style="margin:0;">校园经历</p>
+                            </td>
+                            <td class="td-text">
+                                <ul style="padding: 20px; line-height: 35px;">
+                                    <li>2017-2018学年度获得校优秀学生三等奖学金</li>
+                                    <li>2017-2018学年度获得校级优秀共青团员</li>
+                                    <li>2018-2019学年度获得校级优秀学生干部</li>
+                                    <li>2019年全国计算机设计大赛数媒组-校赛二等奖</li>
+                                    <li>2017-2018学年任院团委新闻部干事，推送校园热点，宣传学院活动</li>
+                                    <li>2018-2019学年任校社联文宣部干部，运营校级公众号“社彩中南”，制作宣传物资</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-title" height="200px">
+                                <img src="../img/icon-shixi.png" alt="">
+                                <p style="margin:0;">实习经历</p>
+                            </td>
+                            <td class="td-text">
+                                <p style="font-weight: 600;"> 2018.02 珠海格力电器股份有限公司（海南分公司） 财务助理</p>
+                                <p style="font-size: 13px;">主要工作为协助财务部完成账单整理排序，发票收集入账，账目Excel处理</p>
+                                <p style="font-weight: 600;">2019.08-2019.09 信达证券海口营业部 营销部实习</p>
+                                <p style="font-size: 13px;">承销基金作盈利分析，期权模拟操盘，整理营业部会议记录，协助宣传客户活动</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-title" height="300px">
+                                <img src="../img/icon-ski.png" alt="">
+                                <p style="margin:0;">个人技能</p>
+                            </td>
+                            <td class="td-text">
+                                <ul style="padding: 20px; line-height: 35px;">
+                                    <li>基于c#语言的Windows应用开发</li>
+                                    <li>基于JS+CSS+HTML5的微信小程序开发</li>
+                                    <li>mysql、SqlServer数据库操作</li>
+                                    <li>基于Photoshop与illustrator软件图像处理</li>
+                                    <li>基于Premiere与After Effects软件视频制作</li>
+                                    <li>新媒体运营，公众号推文写作与排版</li>
+                                    <li>单反摄影</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- tab3即为我的作品 -->
+    <div id="tab_3">
+        <div class="inner">
+            <div class="title"> </div>
+            <div class="line"></div>
+            <div class="container">
+                <!-- 作品盒子 -->
+                <div class="block">
+                    <!-- 内部布局使用grid -->
+                    <div class="item1" style="background: url(../img/qfbj.jpg) no-repeat; background-size: 100% 100%;">
+                    </div>
+                    <a href="../html/program.html" style="text-decoration: none;">
+                        <div class="item2">
+                            <img src="../img/icon-wx.jpg" style="width: 40px; height: 40px;">
+                            <p>"千方百记"微信小程序</p>
+                        </div>
+                    </a>
+                    <div class="item3">
+                        <p>
+                            千方百记基于原生框架开发的微信小程序</br>
+                            • 移动端开发，随身携带云账本，方便记录</br>
+                            • 操作简单，界面友好，用户体验流畅</br>
+                            • 面向特殊使用场景，定制个性化账本</br>
+                            • 针对性带有数据处理功能，做有灵魂的账本</br>
+                            • 衍生生成账单海报、旅行AA计算、库存商品记录、发票图片记录等功能的趣味账本</br>
+                        </p>
+                    </div>
+                    <div class="item4">
+                        <div class="icon">
+                            <p><a href="#"><span class="icon1"></a></span></p>
+                            <p><a href="#"><span class="icon2"></a></span></p>
+                            <p><a href="#"><span class="icon3"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="item1" style="background: url(../img/hfb.png) no-repeat; background-size: 100% 100%;">
+                    </div>
+                    <div class="item2">
+                        <img src="../img/icon-vs.jpg" style="width: 40px; height: 40px; ">
+                        <p>"护肤宝"应用软件</p>
+                    </div>
+                    <div class="item3">
+                        <p>
+                            护肤宝——基于MVVM架构桌面应用开发<br />
+                            ▷ 用户端功能：<br />
+                            肤质测试、护肤品推荐、成分查询、积分兑换...<br />
+                            ▷ 管理端功能：<br />
+                            用户管理、产品管理、商城管理、订单管理、评论管理、测试管理...<br />
+                        </p>
+                    </div>
+                    <div class="item4">
+                        <div class="icon">
+                            <p><a href="#"><span class="icon1"></a></span></p>
+                            <p><a href="#"><span class="icon2"></a></span></p>
+                            <p><a href="#"><span class="icon3"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="item1" style="background: url(../img/stake.png) no-repeat; background-size: 100% 100%;">
+                    </div>
+                    <div class="item2">
+                        <img src="../img/icon-R.jpg" style="width: 40px; height: 40px;">
+                        <p>平安银行证券模拟交易</p>
+                    </div>
+                    <div class="item3">
+                        <p>
+                            ▷ 该证券模拟交易基于R语言实现，
+                            研究均线、KDJ、BIAS等因素操作叠加对股票盈利状况影响<br />
+                            ▷ 长线模拟交易上利用9年数据进行训练获得最佳长期均线,叠加其他交易策略（BIAS止损+KDJ模型优化）<br />
+                            ▷ 交易结果以年化收益率、最大回撤率、夏普比率量化分析
+                        </p>
+                    </div>
+                    <div class="item4">
+                        <div class="icon">
+                            <p><a href="#"><span class="icon1"></a></span></p>
+                            <p><a href="#"><span class="icon2"></a></span></p>
+                            <p><a href="#"><span class="icon3"></a></span></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- tab4即为个人爱好 -->
+    <div id="tab_4">
+        <div class="inner">
+            <div class="title"> </div>
+            <div class="line"></div>
+            <!-- 瀑布布局 -->
+            <div class="waterfall">
+                <div class="box">
+                    <div class="itemContent" style="height: 230px">
+                        <img src="../img/collection/phg3.jpg" alt="">
+                        <span>摄影 | 小岛年味</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <a href="../html/video.html">
+                        <div class="itemContent" style="height: 210px">
+                            <img src="../img/collection/video3.png" alt="">
+                            <span>视频 | 五四社团风采</span>
+                            <span class="bottom"> </span>
+                        </div>
+                    </a>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 420px">
+                        <img src="../img/collection/ps3.jpg" alt="">
+                        <span>美工 | 七月市集海报</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 300px">
+                        <img src="../img/collection/phg7.jpg" alt="">
+                        <span>摄影 | 武康路老洋房</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 310px">
+                        <img src="../img/collection/food4.jpg" alt="">
+                        <span>美食 | 南瓜紫薯汤圆</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 250px">
+                        <img src="../img/collection/phg2.jpg" alt="">
+                        <span>摄影 | 小岛晴天</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 235px">
+                        <img src="../img/collection/ps2.jpg" alt="">
+                        <span>美工 | 宣传三折页</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 240px">
+                        <img src="../img/collection/phg6.jpg" alt="">
+                        <span>摄影 | 川美一隅</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 310px">
+                        <img src="../img/collection/food2.jpg" alt="">
+                        <span>美食 | 芝心芋泥酥饼</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 275px">
+                        <img src="../img/collection/video1.jpg" alt="">
+                        <span>视频 | 巡礼闭幕式主题视频</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 245px">
+                        <img src="../img/collection/ps1.jpg" alt="">
+                        <span>美工 | 个人宣传画册</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 200px">
+                        <img src="../img/collection/ps6.jpg" alt="">
+                        <span>美工 | 百团大战展板</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 235px">
+                        <img src="../img/collection/phg1.jpg" alt="">
+                        <span>摄影 | 音乐会房东的猫</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 230px">
+                        <img src="../img/collection/phg4.jpg" alt="">
+                        <span>摄影 | 挥春</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 310px">
+                        <img src="../img/collection/food5.jpg" alt="">
+                        <span>美食 | 芝香麻薯</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 310px">
+                        <img src="../img/collection/food3.jpg" alt="">
+                        <span>美食 | 果香蜜汁烤鸡</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 220px">
+                        <img src="../img/collection/video2.png" alt="">
+                        <span>视频 | vlog踏青</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 420px">
+                        <img src="../img/collection/ps4.jpg" alt="">
+                        <span>美工 | 卡瓦尼咖啡海报</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 240px">
+                        <img src="../img/collection/phg9.jpg" alt="">
+                        <span>摄影 | 弓弦之舞音乐会</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="itemContent" style="height: 310px">
+                        <img src="../img/collection/food6.jpg" alt="">
+                        <span>美食 | 芋泥酸奶盒子</span>
+                        <span class="bottom"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 底栏 -->
+    <div id="footer">
+        <div class="foot-text">
+            <p style="font-size: 18px;">Nice to meet you</p>
+            <p style="font-size: 15px;">Contact me : 1031906008@qq.com</p>
+        </div>
+    </div>
+    <!-- <script src="../js/script.js"></script> -->
+</body>
+
+</html>
